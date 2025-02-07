@@ -1,0 +1,190 @@
+body {
+    margin: 0;  /* 去掉默认的外边距 */
+    padding: 20px;  /* 设置内边距 */
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);  /* 设置背景为渐变色 */
+    min-height: 100vh;  /* 设置最小高度为视口高度 */
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;  /* 设置字体 */
+}
+
+.container {
+    max-width: 1000px;  /* 设置最大宽度 */
+    margin: 0 auto;  /* 水平居中 */
+    padding: 30px;  /* 设置内边距 */
+    background: rgba(255, 255, 255, 0.95);  /* 设置背景为半透明白色 */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);  /* 添加阴影效果 */
+    border-radius: 16px;  /* 设置圆角 */
+    backdrop-filter: blur(10px);  /* 添加模糊效果 */
+}
+
+h1 {
+    color: #2c3e50;  /* 设置标题颜色 */
+    text-align: center;  /* 居中对齐 */
+    font-size: 2.2em;  /* 设置字体大小 */
+    font-weight: 600;  /* 设置字体粗细 */
+    margin-bottom: 40px;  /* 设置下边距 */
+    letter-spacing: 0.5px;  /* 设置字母间距 */
+}
+
+.upload-section {
+    margin: 20px 0;  /* 设置上下外边距 */
+    padding: 40px 30px;  /* 设置内边距 */
+    border: 2px dashed #e0e0e0;  /* 设置边框样式为虚线 */
+    border-radius: 12px;  /* 设置圆角 */
+    background-color: rgba(255, 255, 255, 0.8);  /* 设置背景为半透明白色 */
+    display: flex;  /* 使用flex布局 */
+    flex-direction: column;  /* 垂直排列子元素 */
+    align-items: center;  /* 子元素水平居中 */
+    min-height: 200px;  /* 设置最小高度 */
+    transition: all 0.3s ease;  /* 添加过渡效果 */
+}
+
+.upload-section:hover {
+    border-color: #4CAF50;  /* 鼠标悬停时改变边框颜色 */
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.1);  /* 鼠标悬停时添加阴影效果 */
+}
+
+.upload-section h2 {
+    align-self: flex-start;  /* 标题靠左对齐 */
+    margin-bottom: 50px;  /* 设置下边距 */
+    color: #34495e;  /* 设置标题颜色 */
+    font-weight: 500;  /* 设置字体粗细 */
+}
+
+.file-input {
+    flex-grow: 1;  /* 允许该元素占据剩余空间 */
+    display: flex;  /* 使用flex布局 */
+    align-items: center;  /* 垂直居中对齐 */
+    justify-content: center;  /* 水平居中对齐 */
+}
+
+.file-input input[type="file"] {
+    padding: 10px;  /* 设置内边距 */
+    font-size: 16px;  /* 设置字体大小 */
+    background: #f8f9fa;  /* 设置背景颜色 */
+    border: 1px solid #e9ecef;  /* 设置边框 */
+    border-radius: 8px;  /* 设置圆角 */
+    cursor: pointer;  /* 鼠标悬停时显示为手型 */
+    transition: all 0.3s ease;  /* 添加过渡效果 */
+}
+
+.file-input input[type="file"]:hover {
+    background: #e9ecef;  /* 鼠标悬停时改变背景颜色 */
+}
+
+.visualization-section {
+    margin-top: 40px;  /* 设置上边距 */
+    padding: 30px;  /* 设置内边距 */
+    background: rgba(255, 255, 255, 0.8);  /* 设置背景为半透明白色 */
+    border-radius: 12px;  /* 设置圆角 */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);  /* 添加阴影效果 */
+}
+
+.controls {
+    margin: 30px 0;  /* 设置上下外边距 */
+    display: flex;  /* 使用flex布局 */
+    gap: 15px;  /* 设置子元素之间的间距 */
+    justify-content: center;  /* 水平居中对齐 */
+    flex-wrap: wrap;  /* 允许换行 */
+    align-items: center;  /* 垂直居中对齐 */
+}
+
+.button-group {
+    display: flex;  /* 使用flex布局 */
+    gap: 10px;  /* 设置按钮之间的间距 */
+}
+
+select {
+    padding: 12px 20px;  /* 设置内边距 */
+    border-radius: 8px;  /* 设置圆角 */
+    border: 1px solid #e0e0e0;  /* 设置边框 */
+    font-size: 15px;  /* 设置字体大小 */
+    background: white;  /* 设置背景颜色 */
+    color: #2c3e50;  /* 设置字体颜色 */
+    min-width: 160px;  /* 设置最小宽度 */
+    cursor: pointer;  /* 鼠标悬停时显示为手型 */
+    transition: all 0.3s ease;  /* 添加过渡效果 */
+}
+
+select:hover {
+    border-color: #4CAF50;  /* 鼠标悬停时改变边框颜色 */
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.1);  /* 鼠标悬停时添加阴影效果 */
+}
+
+button {
+    padding: 12px 24px;  /* 设置内边距 */
+    background: linear-gradient(45deg, #4CAF50, #45a049);  /* 设置渐变背景 */
+    color: white;  /* 设置字体颜色为白色 */
+    border: none;  /* 去掉边框 */
+    border-radius: 8px;  /* 设置圆角 */
+    font-size: 15px;  /* 设置字体大小 */
+    font-weight: 500;  /* 设置字体粗细 */
+    cursor: pointer;  /* 鼠标悬停时显示为手型 */
+    transition: all 0.3s ease;  /* 添加过渡效果 */
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);  /* 添加阴影效果 */
+}
+
+button:hover {
+    transform: translateY(-1px);  /* 鼠标悬停时向上移动 */
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);  /* 鼠标悬停时添加更强的阴影效果 */
+}
+
+#generateChart {
+    background: linear-gradient(45deg, #4CAF50, #45a049);  /* 设置渐变背景 */
+}
+
+#exportChart {
+    background: linear-gradient(45deg, #2196F3, #1976D2);  /* 设置渐变背景 */
+}
+
+#generateChart:hover,
+#exportChart:hover {
+    transform: translateY(-1px);  /* 鼠标悬停时向上移动 */
+}
+
+#generateChart:hover {
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);  /* 鼠标悬停时添加阴影效果 */
+}
+
+#exportChart:hover {
+    box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);  /* 鼠标悬停时添加阴影效果 */
+}
+
+#chartContainer {
+    width: 100%;  /* 设置宽度为100% */
+    height: 500px;  /* 设置高度为500px */
+    margin-top: 20px;  /* 设置上边距 */
+    background: white;  /* 设置背景颜色为白色 */
+    border-radius: 12px;  /* 设置圆角 */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);  /* 添加阴影效果 */
+    overflow: hidden;  /* 隐藏溢出内容 */
+}
+
+#dataTableContainer {
+    margin-top: 20px;  /* 设置上边距 */
+    overflow-x: auto;  /* 允许横向滚动 */
+}
+
+#dataTable {
+    width: 100%;  /* 设置宽度为100% */
+    border-collapse: collapse;  /* 合并边框 */
+    margin-top: 10px;  /* 设置上边距 */
+}
+
+#dataTable th, #dataTable td {
+    border: 1px solid #ddd;  /* 设置边框 */
+    padding: 8px;  /* 设置内边距 */
+    text-align: left;  /* 左对齐 */
+}
+
+#dataTable th {
+    background-color: #f2f2f2;  /* 设置表头背景颜色 */
+    font-weight: bold;  /* 设置表头字体为粗体 */
+}
+
+#dataTable tr:nth-child(even) {
+    background-color: #f9f9f9;  /* 设置偶数行背景颜色 */
+}
+
+#dataTable tr:hover {
+    background-color: #f1f1f1;  /* 鼠标悬停时改变行背景颜色 */
+} 

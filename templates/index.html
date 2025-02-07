@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据可视化平台</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>数据可视化平台</h1>
+        
+        <div class="upload-section">
+            <h2>上传数据</h2>
+            <div class="file-input">
+                <input type="file" id="fileInput" accept=".csv,.xlsx,.xls">
+            </div>
+        </div>
+
+        <div class="visualization-section" style="display: none;">
+            <h2>创建可视化</h2>
+            <div class="controls">
+                <select id="xColumn">
+                    <option value="">选择 X 轴数据</option>
+                </select>
+                
+                <select id="yColumn">
+                    <option value="">选择 Y 轴数据</option>
+                </select>
+                
+                <select id="chartType">
+                    <option value="scatter">散点图</option>
+                    <option value="bar">柱状图</option>
+                    <option value="line">折线图</option>
+                    <option value="pie">饼图</option>
+                </select>
+                
+                <div class="button-group">
+                    <button id="generateChart">生成图表</button>
+                    <button id="exportChart">导出图表</button>
+                </div>
+            </div>
+            
+            <div id="chartContainer"></div>
+
+            <h2>数据表格</h2>
+            <div id="dataTableContainer">
+                <table id="dataTable">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
