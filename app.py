@@ -100,4 +100,4 @@ def get_table_data():
     })
 
 if __name__ == '__main__':
-    app.run(debug=False)  # 运行Flask应用 
+    app.run(debug=False, host='0.0.0.0', port=5000)  # 设置 host 为 0.0.0.0 让 Flask 接受公网请求
